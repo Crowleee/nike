@@ -17,7 +17,7 @@ body {
     font-family: 'Roboto Condensed', sans-serif;
     background-color: #683e98;
     background-image: url(../img/bg_t.png), linear-gradient(to right, #683e98, #ab70af);
-    background-repeat: no-repeat, repeat;
+    background-repeat: no-repeat repeat;
     background-position: center;
     background-size: cover;
     min-height: 100%;
@@ -127,7 +127,7 @@ main {
     width: 65%;
     background: #f4f4f4;
     background-image: url(../img/bg.png), linear-gradient(to bottom, #ede9ec 0%, #f5f5f5 30%);
-    background-repeat: no-repeat repeat;
+    background-repeat: repeat no-repeat;
     background-position: 0 25%, center;
     position: relative;
 }
@@ -144,6 +144,7 @@ main {
 
 .card__info {
     width: 35%;
+    padding: 45px 30px;
 }
 
 .card__model {
@@ -190,4 +191,166 @@ main {
 .card__preview:focus,
 .card__preview:active {
     opacity: 1;  
+}
+
+.card__bage {
+    font-size: 1rem;
+    font-family: Roboto, sans-serif;
+    text-transform: uppercase;
+    background-color: #ffa60d;
+    color: #fff;
+    padding: 7px;
+}
+
+.card__title {
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.card__title a {
+    color: #5e4fff;
+}
+
+.card__title a:hover,
+.card__title a:focus,
+.card__title a:active {
+    color: #a200b8;
+}
+
+.card__subtitle {
+    vertical-align: middle;
+    margin-right: 1em;
+}
+
+.stars {
+    margin: 0;
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 0;
+}
+
+.star {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background-image: url(../img/star.svg); 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+[data-stars="0"] .star:nth-child(n+1),
+[data-stars="1"] .star:nth-child(n+2),
+[data-stars="2"] .star:nth-child(n+3),
+[data-stars="3"] .star:nth-child(n+4),
+[data-stars="4"] .star:nth-child(n+5) {
+    opacity: .4;
+}
+
+
+[data-currency="uah"] .card__price:before {
+    content: "₴";
+}
+
+.card__price {
+    font-family: Roboto, sans-serif;
+    font-size: 1.8rem;
+    font-weight: 300;
+    margin: 20px 0;
+}
+
+.card__price:before {
+    margin-right: .3em;
+    content: "$";
+}
+
+.sizes__list {
+    padding: 0;
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* .sizes__list:after {
+    content: '';
+    flex: 1 0 auto;
+} */
+
+.sizes__item {
+    display: inline-block;
+}
+
+.sizes__link {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border: 1px solid transparent;
+    text-align: center;
+    line-height: 24px;
+    font-size: 1.3rem;
+    color: #000;
+}
+
+.sizes__link:hover,
+.sizes__link:focus,
+.sizes__link:active,
+.sizes__link--active {
+    border-color: #000;
+}
+
+.card__buttons {
+    margin: 30px 0;
+    display: inline-block;  
+}
+
+.btn {
+    text-transform: uppercase;
+    color: #000;
+    font-size: 1rem;
+    padding: 10px;
+    display: block;
+    border: 1px solid #000;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.btn:hover,
+.btn:focus,
+.btn:active {
+    background-color: #000;
+    color: #fff;
+}
+
+.btn--accent {
+    background-color: #a200b8;
+    border-color: #a200b8; 
+    color: #fff;
+}
+
+.btn--accent:hover,
+.btn--accent:focus,
+.btn--accent:active {
+    background-color: #fff; 
+    color: #a200b8;
+}
+
+.stars2 {
+    margin: 0;
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 0;  
+    background-image: linear-gradient(to right, #a200b8 0, #a200b8 25%, #fff 66%);
+    font-size: 0;
+}
+
+.stars2 li {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-image: url(../img/star.png); 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin: -1px 0;
 }
